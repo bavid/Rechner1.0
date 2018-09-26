@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            double zahl1 = 0;
+            double zahl2= 0;
+            double ergeb = 0;
+            int auswahl = 0;
+            bool isRunning = true;
+
+            while (isRunning)
+            {
+                try
+                {
+                    Console.WriteLine("Taschenrechner\nWählen Sie zwischen \n1)addition \n2)subtraktion\n3)multiplikation\n4)division ");
+                    auswahl = Convert.ToInt32(Console.ReadLine());
+
+                    switch (auswahl)
+                    {
+                        case 1:
+                            Console.WriteLine("\nGeben Sie eine Zahl ein:");
+                            zahl1 = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("Geben Sie eine weitere Zahl ein:");
+                            zahl2 = Convert.ToDouble(Console.ReadLine());
+
+                            ergeb = zahl1 + zahl2;
+                            break;
+
+
+                        case 2:
+
+
+
+                            Console.WriteLine("\nGeben Sie eine Zahl ein:");
+                            string zahlString = Console.ReadLine();
+                            zahl1 = Convert.ToDouble(zahlString);
+
+
+                            Console.WriteLine("Geben Sie eine weitere Zahl ein:");
+                            zahl2 = Convert.ToDouble(Console.ReadLine());
+
+                            ergeb = zahl1 - zahl2;
+
+                            break;
+
+
+                        case 3:
+
+                            Console.WriteLine("\nGeben Sie eine Zahl ein:");
+                            zahl1 = Convert.ToDouble(Console.ReadLine());
+
+
+                            Console.WriteLine("Geben Sie eine weitere Zahl ein:");
+                            zahl2 = Convert.ToDouble(Console.ReadLine());
+
+                            ergeb = zahl1 * zahl2;
+
+                            Console.WriteLine(String.Format("Das Produkt der zahlen lautet: {0}", ergeb));
+                            break;
+
+                        case 4:
+
+                            Console.WriteLine("\nGeben Sie eine Zahl ein:");
+                            zahl1 = Convert.ToDouble(Console.ReadLine());
+
+
+                            Console.WriteLine("Geben Sie eine weitere Zahl ein:");
+                            zahl2 = Convert.ToDouble(Console.ReadLine());
+
+                            ergeb = zahl1 / zahl2;
+
+                            Console.WriteLine(String.Format("Der Quotient der zahlen lautet: {0}", ergeb));
+                            break;
+
+                        default:
+                            Console.WriteLine("Ungültige Eingabe");
+                            break;
+
+                    }
+
+
+                    
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+                
+            }
+       
+
+
+
+            
+
+
+
+
+            Console.ReadKey();
+            
+           
+
+        }
+    }
+}
